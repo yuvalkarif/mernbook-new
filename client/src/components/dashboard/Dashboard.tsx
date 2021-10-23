@@ -5,11 +5,12 @@ import { useState, useEffect } from "react";
 import { getPostsByFollowed } from "../../helpers/api";
 import { Header } from "../header/Header";
 import { DashboardWrapper } from "./Dashboard.styles";
+import { useTitle } from "../../hooks/useTitle";
 
 export const Dashboard = () => {
   const { user } = useUserContext();
   const [posts, setPosts] = useState<string[]>([]);
-
+  useTitle("Mernbook");
   useEffect(() => {
     const fetchPosts = async () => {
       if (user?._id) {

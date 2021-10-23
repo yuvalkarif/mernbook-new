@@ -7,12 +7,14 @@ import { User } from "../../constants/interfaces";
 import { SearchProfile } from "./SearchProfile";
 import { SearchProfileSkeleton } from "./SearchProfileSkeleton";
 import { useEffect } from "react";
+import { useTitle } from "../../hooks/useTitle";
 
 export const Search = () => {
   const [query, setQuery] = useState("");
   const [profiles, setProfiles] = useState<User[] | []>([]);
   const [recProfiles, setRecProfiles] = useState<User[] | undefined>();
   const [isLoading, setIsLoading] = useState(false);
+  useTitle("Search | Mernbook");
 
   useEffect(() => {
     if (!recProfiles) {
