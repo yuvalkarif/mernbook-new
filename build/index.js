@@ -61,11 +61,19 @@ app.use(_passport.default.initialize());
 app.use(_passport.default.session());
 (0, _passport2.default)(_passport.default); //Routing
 
-app.use(_express.default.static(_path.default.resolve(__dirname, "/../client/build")));
+if (process.NODE_ENV == "production") {
+  app.use(_express.default.static(_path.default.resolve(__dirname, "/../../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(_path.default.resolve(__dirname, "/../../client/build", "index.html"));
+  });
+} else {
+  app.use(_express.default.static(_path.default.resolve(__dirname, "../client/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(_path.default.resolve(__dirname, "../client/build", "index.html"));
+  });
+}
+
 app.use("/api", _api.default);
-app.get("*", (req, res) => {
-  res.sendFile(_path.default.resolve(__dirname, "/../client/build", "index.html"));
-});
 app.use(_error.errorHandler); //Activating
 
 var port = process.env.PORT || 3001;
