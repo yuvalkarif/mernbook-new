@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import {
   bigIcon,
-  smallIcon,
   Container,
   MediumImage,
   TextBox,
   WideButton,
-  Button,
 } from "../styled/styledTheme";
 import { Photo, Upload } from "@styled-icons/material-rounded";
 

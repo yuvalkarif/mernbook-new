@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { PostWriter } from "../post-writer/PostWriter";
 import { Post } from "../post/Post";
 import { useEffect, useReducer, useState } from "react";

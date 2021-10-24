@@ -1,4 +1,3 @@
-import { User } from "../../constants/interfaces";
 import { logout } from "../../helpers/api";
 import { MediumImage } from "../styled/styledTheme";
 import {

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useFetchPost } from "../../hooks/useFetchPost";
 import { useFetchUser } from "../../hooks/useFetchUser";

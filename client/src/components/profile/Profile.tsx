@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { ProfileHeader } from "./ProfileHeader";
 import { ProfileAbout } from "./ProfileAbout";
@@ -11,7 +12,6 @@ import { useUserContext } from "../../hooks/useUserContext";
 import { useParams } from "react-router";
 import { Header } from "../header/Header";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
 
 export const Profile: React.FC = () => {
   const [user, setFetchUser, error] = useFetchUser();

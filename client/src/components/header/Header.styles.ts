@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { bigIcon, smallIcon, TextBox, WideButton } from "../styled/styledTheme";
+import { bigIcon, WideButton } from "../styled/styledTheme";
 import { Search, Logout } from "@styled-icons/material-rounded";
 import { Link } from "react-router-dom";
 

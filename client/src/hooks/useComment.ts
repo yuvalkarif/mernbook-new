@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { Comment } from "../constants/interfaces";
+import { useContext } from "react";
+
 import UserContext from "../constants/context";
 import { postComment } from "../helpers/api";
 const useComment = () => {

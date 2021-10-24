@@ -39,7 +39,7 @@ export const ProfileEditor = ({
     if (editUser.birthday && startDate === "") {
       setStartDate(formatDateInput(editUser.birthday));
     }
-  });
+  }, [editUser, startDate]);
 
   const handleSubmit = async () => {
     try {

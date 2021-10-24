@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { Comment } from "../../constants/interfaces";
 import { useFetchUser } from "../../hooks/useFetchUser";
 import { useEffect } from "react";

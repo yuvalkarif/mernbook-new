@@ -1,4 +1,3 @@
-import { Wrapper } from "../styled/styledTheme";
 import { Feed } from "../feed/Feed";
 import { useUserContext } from "../../hooks/useUserContext";
 import { useState, useEffect } from "react";
@@ -28,7 +27,6 @@ export const Dashboard = () => {
     <>
       <Header />
       <DashboardWrapper>
-        {/* {posts && console.log(posts)} */}
         {posts && <Feed posts={posts} isUser={true} />}
         {!posts.length && (
           <>

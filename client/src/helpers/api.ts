@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Account, User } from "../constants/interfaces";
+import { Account } from "../constants/interfaces";
 import * as config from "../variables/config.json";
 
 export const signup = async (account: Account) => {

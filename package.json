@@ -4,11 +4,16 @@
   "description": "mern stack facebook clone",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon  --exec babel-node src/index.js"
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js",
+    "test": "nodemon  --exec babel-node src/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s"
   },
   "author": "Yuval Karif <yuvalkarif3@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8",

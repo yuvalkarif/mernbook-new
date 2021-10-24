@@ -20,7 +20,7 @@ export const Login = ({
     password: "",
   });
   const handleGuest = () => {
-    setAccount({ username: "yuvalkarif", password: "asdf" });
+    setAccount({ username: "mernbook", password: "mernbook" });
   };
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();

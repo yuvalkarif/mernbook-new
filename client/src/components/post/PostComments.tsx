@@ -2,7 +2,6 @@ import { Comment } from "../../constants/interfaces";
 import { Comments, ShowButton } from "./Post.styles";
 import { PostComment } from "./PostComment";
 import { useState, useEffect } from "react";
-import Skeleton from "react-loading-skeleton";
 export const PostComments = ({
   comments,
   setComments,

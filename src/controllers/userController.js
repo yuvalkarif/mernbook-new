@@ -29,17 +29,24 @@ export const signup = async (req, res, next) => {
   }
 };
 
+// export const login = (req, res, next) => {
+//   if (req.user) {
+//     res.send("Successfully Authenticated");
+//   } else {
+//     res.status(403).send("User doesn't exists");
+//   }
+// };
 export const login = (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
-    if (err) next(err);
+    if (err) return next(err);
     if (!user) {
-      res.status(403).send("User doesn't exists");
+      return res.status(403).send("User doesn't exists");
     } else {
-      req.logIn(user, (err) => {
+      req.login(user, (err) => {
         if (err) {
-          next(err);
+          return next(err);
         }
-        res.send("Successfully Authenticated");
+        return res.send("Successfully Authenticated");
       });
     }
   })(req, res, next);

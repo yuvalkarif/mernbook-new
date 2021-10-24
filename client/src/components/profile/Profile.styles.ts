@@ -4,7 +4,7 @@ import { LocationOn } from "@styled-icons/material-rounded/LocationOn";
 import { AccessTime } from "@styled-icons/material-rounded/AccessTime";
 import { Edit } from "@styled-icons/material-rounded";
 import { BirthdayCake } from "@styled-icons/fa-solid";
-import { Button, Container, TextBox, WideButton } from "../styled/styledTheme";
+import { Button, Container, TextBox } from "../styled/styledTheme";
 import { Work, PersonAdd } from "@styled-icons/material-rounded";
 
 export const ProfilePicBig = styled.img`

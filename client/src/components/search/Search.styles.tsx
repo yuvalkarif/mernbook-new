@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container, TextBox, Button, BigImage } from "../styled/styledTheme";
+import { Container, TextBox, BigImage } from "../styled/styledTheme";
 import { Search } from "@styled-icons/material-rounded";
 
 export const SearchBar = styled.input`
