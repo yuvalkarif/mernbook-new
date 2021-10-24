@@ -31,7 +31,7 @@ app.use(
 if (process.env.NODE_ENV == "production") {
   console.log("Production Mode");
   app.use(compression());
-  app.use(helmet());
+  // app.use(helmet());
   app.use(cors());
 } else {
   console.log("Development Mode");
