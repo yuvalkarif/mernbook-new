@@ -4,7 +4,7 @@ import { Search, Logout } from "@styled-icons/material-rounded";
 import { Link } from "react-router-dom";
 
 export const HeaderWrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
   background-color: ${({ theme }) => theme.containerBg};
   display: flex;
   justify-content: space-between;
@@ -14,12 +14,12 @@ export const HeaderWrapper = styled.div`
     align-items: center;
   }
 
-  padding-block: 0.2rem;
+  padding: 0.2rem 0.5rem;
 `;
 
 export const HeaderProfile = styled.div`
   justify-self: flex-end;
-  margin-inline: 1rem;
+
   span {
     font-weight: 600;
     color: ${({ theme }) => theme.btnText};
@@ -29,17 +29,11 @@ export const HeaderProfile = styled.div`
     }
   }
 `;
-export const SearchInput = styled.input`
-  ${TextBox}
-  max-width: 20rem;
-  max-height: 2.5rem;
-  border-radius: 1.5rem;
-  margin: 0 auto;
-  padding-right: 2rem;
-`;
+
 export const HeaderSearch = styled.div`
   justify-self: center;
   width: 100%;
+  margin-left: 0.5rem;
   div {
     display: flex;
     align-items: center;
@@ -47,7 +41,8 @@ export const HeaderSearch = styled.div`
     margin: 0 auto;
     ${WideButton}
     max-width: fit-content;
-    padding: 0.5rem 0.5rem;
+    border-radius: 2rem;
+    padding: 0.3rem;
     span {
       @media (max-width: 768px) {
         display: none;
@@ -58,6 +53,11 @@ export const HeaderSearch = styled.div`
 
 export const SearchIcon = styled(Search)`
   ${bigIcon}
+  border-radius: 100%;
+  padding: 0.5rem;
+  background-color: ${({ theme }) => theme.btnBg};
+
+  min-width: 1.5rem;
 `;
 export const LogoutIcon = styled(Logout)`
   ${bigIcon}

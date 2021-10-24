@@ -57,7 +57,7 @@ export const Feed = ({
   posts: string[];
   isUser?: boolean;
 }) => {
-  const [ref, inView] = useInView({ threshold: 1 });
+  const [ref, inView] = useInView({ threshold: 0 });
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
   const [state, dispatchPosts] = useReducer(reducer, {
@@ -74,6 +74,7 @@ export const Feed = ({
   };
 
   useEffect(() => {
+    console.log(state);
     if (state.postsToRender.length <= 0 && state.postsIds.length > 0) {
       loadSelector();
     }
@@ -87,6 +88,7 @@ export const Feed = ({
   }, [posts]);
 
   useEffect(() => {
+    console.log(inView, isLoaded);
     if (inView && isLoaded && state.postsIds.length !== 0) {
       loadSelector();
     }
@@ -113,7 +115,7 @@ export const Feed = ({
           })}
       </FeedWrapper>
       {isLoaded && state.postsIds.length !== 0 && (
-        <div ref={ref} style={{ marginTop: "1rem" }}></div>
+        <div ref={ref} style={{ marginTop: "1rem", height: "1rem" }}></div>
       )}
     </div>
   );

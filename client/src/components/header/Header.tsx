@@ -4,7 +4,6 @@ import { MediumImage } from "../styled/styledTheme";
 import {
   HeaderWrapper,
   HeaderProfile,
-  SearchInput,
   HeaderSearch,
   SearchIcon,
   ProfileButton,
@@ -12,6 +11,7 @@ import {
 } from "./Header.styles";
 import { useHistory } from "react-router";
 import { useUserContext } from "../../hooks/useUserContext";
+import Logo from "../../images/logo.png";
 
 export const Header = () => {
   const history = useHistory();
@@ -33,12 +33,7 @@ export const Header = () => {
   return (
     <HeaderWrapper>
       <div>
-        <MediumImage
-          onClick={handleDashboard}
-          src={
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
-          }
-        />
+        <MediumImage onClick={handleDashboard} src={Logo} />
         <HeaderSearch>
           <div onClick={handleSearch}>
             <SearchIcon />
