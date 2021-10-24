@@ -80,9 +80,9 @@ export const Feed = ({
   }, [state.postsIds, state.postsToRender]);
 
   useEffect(() => {
-    if (state.postsToRender.length !== 0) {
-      dispatchPosts({ type: "reset_posts", posts: posts.slice(0) });
+    if (state.postsToRender.length !== 0 || state.postsIds.length === 0) {
       setIsLoaded(false);
+      dispatchPosts({ type: "reset_posts", posts: posts.slice(0) });
     }
   }, [posts]);
 

@@ -20,7 +20,8 @@ export const SearchContainer = styled(Container)`
 
   h1 {
     margin-top: 0;
-    padding-bottom: 0.5rem;
+
+    margin-bottom: 1rem;
     text-align: center;
     border-bottom: 1px solid ${({ theme }) => theme.btnBg};
   }

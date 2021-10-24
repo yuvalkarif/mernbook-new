@@ -50,7 +50,7 @@ export const Profile: React.FC = () => {
         <Wrapper>
           <ProfileBody className="profile-body">
             <ProfileAbout about={user?.about} />
-            {user?.posts && user.posts?.length > 0 && (
+            {user && loggedUser && (
               <Feed
                 posts={user?.posts}
                 isUser={loggedUser?._id === user?._id}

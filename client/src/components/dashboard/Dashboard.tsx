@@ -28,8 +28,9 @@ export const Dashboard = () => {
     <>
       <Header />
       <DashboardWrapper>
-        {posts.length >= 1 && <Feed posts={posts} isUser={true} />}
-        {posts.length <= 0 && (
+        {/* {posts && console.log(posts)} */}
+        {posts && <Feed posts={posts} isUser={true} />}
+        {!posts.length && (
           <>
             <p>Seems quite empty in here...</p>
             <h2>Follow other users to see more posts !</h2>
