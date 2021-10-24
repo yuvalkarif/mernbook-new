@@ -28,7 +28,7 @@ app.use(
     saveUninitialized: true,
   })
 );
-if (process.NODE_ENV == "production") {
+if (process.env.NODE_ENV == "production") {
   console.log("Production Mode");
   app.use(compression());
   app.use(helmet());
@@ -42,7 +42,7 @@ app.use(passport.session());
 passportConfig(passport);
 
 //Routing
-if (process.NODE_ENV == "production") {
+if (process.env.NODE_ENV == "production") {
   app.use(express.static(path.resolve(__dirname, "/../../client/public")));
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "/../../client/public", "index.html"));
