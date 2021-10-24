@@ -46,6 +46,8 @@ export const Login = ({
           <div>
             <h1>Mernbook</h1>
             <p>Connect with friends and the web around you on Mernbook.</p>
+
+            <p></p>
           </div>
           <styled.Main className="Main">
             <form onSubmit={handleSubmit}>

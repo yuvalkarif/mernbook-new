@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import * as styled from "./Signup.styles";
 import { Account } from "../../constants/interfaces";
-import { signup } from "../../helpers/api";
+import { login, signup } from "../../helpers/api";
 import { FormError } from "../styled/styledTheme";
 import { useError } from "../../hooks/useError";
 import { useTitle } from "../../hooks/useTitle";
 import { useHistory } from "react-router";
 
-export const Signup: React.FC = () => {
+export const Signup = ({
+  checkForUser,
+}: {
+  checkForUser: () => Promise<void>;
+}) => {
   useTitle("Login | Mernbook");
   const history = useHistory();
   const [account, setAccount] = useState<Account>({
@@ -16,13 +20,22 @@ export const Signup: React.FC = () => {
     password: "",
   });
   const [error, checkError] = useError();
+
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (account) {
       let response;
       try {
         response = await signup(account);
-        console.log(response);
+
+        if (response) {
+          const checkLogin = await login(account);
+
+          if (checkLogin) {
+            await checkForUser();
+            history.push("/");
+          }
+        }
       } catch (e: unknown) {
         checkError(e);
       }

@@ -8,7 +8,7 @@ export const useFollow = () => {
   const { user } = useUserContext();
   const checkFollowing = (userFollowers: string[]) => {
     setFollowers(userFollowers);
-    console.log(followers);
+
     userFollowers.some((follower) => follower === user?._id)
       ? setIsFollowed(true)
       : setIsFollowed(false);

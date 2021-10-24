@@ -74,7 +74,6 @@ export const Feed = ({
   };
 
   useEffect(() => {
-    console.log(state);
     if (state.postsToRender.length <= 0 && state.postsIds.length > 0) {
       loadSelector();
     }
@@ -88,7 +87,6 @@ export const Feed = ({
   }, [posts]);
 
   useEffect(() => {
-    console.log(inView, isLoaded);
     if (inView && isLoaded && state.postsIds.length !== 0) {
       loadSelector();
     }

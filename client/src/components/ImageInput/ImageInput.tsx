@@ -22,7 +22,6 @@ export const ImageInput = ({
   });
   useEffect(() => {
     if (image.isValid && image.src !== picture) {
-      console.log("yo");
       setPicture(image.src);
     }
   }, [image.isValid, image.src, picture, setPicture]);

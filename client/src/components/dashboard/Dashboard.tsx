@@ -28,7 +28,6 @@ export const Dashboard = () => {
     <>
       <Header />
       <DashboardWrapper>
-        {posts && console.log({ posts })}
         {posts.length >= 1 && <Feed posts={posts} isUser={true} />}
         {posts.length <= 0 && (
           <>

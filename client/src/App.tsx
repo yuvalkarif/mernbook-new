@@ -36,7 +36,7 @@ function App() {
                 <Login checkForUser={checkForUser} />
               </ProtectedRoute>
               <Route path={ROUTES.SIGNUP} exact>
-                <Signup />
+                <Signup checkForUser={checkForUser} />
               </Route>
             </Switch>
           </Suspense>

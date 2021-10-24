@@ -19,8 +19,10 @@ body {
     margin:0;
   }
   h1{
+  font-size:2rem;
    color: ${({ theme }) => theme.btnText};
    font-weight: 600;
+   margin:0;
   }
   h5{
     color: ${({ theme }) => theme.btnText};
@@ -29,7 +31,11 @@ body {
   p {
     color: ${({ theme }) => theme.btnText};
     font-weight: 400;
+    margin:0;
     
+  }
+  a{
+    color:${({ theme }) => theme.altText}
   }
 `;
 
