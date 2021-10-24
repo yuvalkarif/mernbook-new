@@ -2,7 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@babel/core": "^7.15.8",
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.15.4",
@@ -39,7 +38,7 @@
   "scripts": {
     "start": " react-scripts start",
     "dev": "set PORT=3001 && npm start",
-    "build": "react-scripts build",
+    "build": "set INLINE_RUNTIME_CHUNK=false && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
