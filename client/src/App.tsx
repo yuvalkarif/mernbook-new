@@ -18,31 +18,29 @@ function App() {
   const [user, checkForUser] = useAuth();
 
   return (
-    <>
-      <UserContext.Provider value={user}>
-        <Router>
-          <Suspense fallback={<p>Loading...</p>}>
-            <Switch>
-              <ProtectedRoute path={ROUTES.DASHBOARD} exact>
-                <Dashboard />
-              </ProtectedRoute>
-              <ProtectedRoute path={ROUTES.PROFILE + ":username"} exact>
-                <Profile />
-              </ProtectedRoute>
-              <ProtectedRoute path={ROUTES.SEARCH} exact>
-                <Search />
-              </ProtectedRoute>
-              <ProtectedRoute path={ROUTES.LOGIN} exact alt>
-                <Login checkForUser={checkForUser} />
-              </ProtectedRoute>
-              <Route path={ROUTES.SIGNUP} exact>
-                <Signup checkForUser={checkForUser} />
-              </Route>
-            </Switch>
-          </Suspense>
-        </Router>
-      </UserContext.Provider>
-    </>
+    <UserContext.Provider value={user}>
+      <Router>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Switch>
+            <ProtectedRoute path={ROUTES.DASHBOARD} exact>
+              <Dashboard />
+            </ProtectedRoute>
+            <ProtectedRoute path={ROUTES.PROFILE + ":username"} exact>
+              <Profile />
+            </ProtectedRoute>
+            <ProtectedRoute path={ROUTES.SEARCH} exact>
+              <Search />
+            </ProtectedRoute>
+            <ProtectedRoute path={ROUTES.LOGIN} exact alt>
+              <Login checkForUser={checkForUser} />
+            </ProtectedRoute>
+            <Route path={ROUTES.SIGNUP} exact>
+              <Signup checkForUser={checkForUser} />
+            </Route>
+          </Switch>
+        </Suspense>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
