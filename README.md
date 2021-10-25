@@ -16,7 +16,7 @@
  <h3 align="center">Live site : https://mernbook-yk.herokuapp.com</h3>
    <br/>
    <br/>
-   <a "center"href="https://mernbook-yk.herokuapp.com/">
+   <a href="https://mernbook-yk.herokuapp.com/">
     <img width="33%" src=https://mernbook-yk.herokuapp.com/static/media/logo.bd0b6a6e.png> 
   </a>
   <a href="https://mernbook-yk.herokuapp.com/">
