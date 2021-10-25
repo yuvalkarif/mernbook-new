@@ -11,19 +11,17 @@
 * Type checking for better development environment.
 * Deployment to Heroku with prod/dev enviorments.
 
- 
-
-
 <p align="center" width="100%">
    <h3 align="center">Signup to Mernbook (or use the guest login) and search your friends, upload posts, leave a like or a comment and browse your feed !</h3>
- <h2 align="center">Live site : https://mernbook-yk.herokuapp.com</h2>
+ <h3 align="center">Live site : https://mernbook-yk.herokuapp.com</h3>
    <br/>
    <br/>
-   <a href="https://mernbook-yk.herokuapp.com/">
+   <a "center"href="https://mernbook-yk.herokuapp.com/">
     <img width="33%" src=https://mernbook-yk.herokuapp.com/static/media/logo.bd0b6a6e.png> 
   </a>
   <a href="https://mernbook-yk.herokuapp.com/">
-    <img width="33%" src="https://media4.giphy.com/media/TBHP5dnXblgY1bja84/giphy.gif?cid=790b76115ceadc0e39f34e599c62748df262325474356cf9&rid=giphy.gif&ct=g"> 
+    <img width="33%" src="https://media2.giphy.com/media/x8X9gbqK7sEeHmB1bD/giphy.gif?cid=790b761163a9ec8e5a9ad994545c52ad2639008e9c931a2e&rid=giphy.gif&ct=g"> 
+ 
   </a>
   
   
