@@ -6,6 +6,7 @@ import { useAuth } from "./hooks/useAuth";
 import UserContext from "./constants/context";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import ROUTES from "./constants/routes";
+import { Loading } from "./components/loading/Loading";
 
 // import Login from "./components/login/Login";
 const { Login } = lazily(() => import("./components/login/Login"));
@@ -20,7 +21,7 @@ function App() {
   return (
     <UserContext.Provider value={user}>
       <Router>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense fallback={<Loading />}>
           <Switch>
             <ProtectedRoute path={ROUTES.DASHBOARD} exact>
               <Dashboard />

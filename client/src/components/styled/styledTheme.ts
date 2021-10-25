@@ -95,9 +95,13 @@ export const smallIcon = css`
   fill: ${({ theme }) => theme.btnTxt};
   max-width: 1rem;
   max-height: 1rem;
+  width: 1rem;
+  height: 1rem;
 `;
 export const bigIcon = css`
   fill: ${({ theme }) => theme.mainTxt};
   max-width: 1.5rem;
   max-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 `;

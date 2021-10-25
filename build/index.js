@@ -47,10 +47,10 @@ app.use((0, _expressSession.default)({
   saveUninitialized: true
 }));
 
-if (process.NODE_ENV == "production") {
+if (process.env.NODE_ENV == "production") {
   console.log("Production Mode");
-  app.use((0, _compression.default)());
-  app.use((0, _helmet.default)());
+  app.use((0, _compression.default)()); // app.use(helmet());
+
   app.use((0, _cors.default)());
 } else {
   console.log("Development Mode");
@@ -61,19 +61,20 @@ app.use(_passport.default.initialize());
 app.use(_passport.default.session());
 (0, _passport2.default)(_passport.default); //Routing
 
-if (process.NODE_ENV == "production") {
-  app.use(_express.default.static(_path.default.resolve(__dirname, "/../../client/build")));
+if (process.env.NODE_ENV == "production") {
+  app.use(_express.default.static(_path.default.join(__dirname, "../client/build")));
+  app.use("/api", _api.default);
   app.get("*", (req, res) => {
-    res.sendFile(_path.default.resolve(__dirname, "/../../client/build", "index.html"));
+    res.sendFile(_path.default.join(__dirname, "../client/build", "index.html"));
   });
 } else {
   app.use(_express.default.static(_path.default.resolve(__dirname, "../client/build")));
+  app.use("/api", _api.default);
   app.get("*", (req, res) => {
     res.sendFile(_path.default.resolve(__dirname, "../client/build", "index.html"));
   });
 }
 
-app.use("/api", _api.default);
 app.use(_error.errorHandler); //Activating
 
 var port = process.env.PORT || 3001;

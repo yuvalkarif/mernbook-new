@@ -60,10 +60,13 @@ export const WriterProfile = styled(MediumImage)``;
 
 export const ActionButton = styled.button`
   ${WideButton}
-  width:unset;
-  min-width: fit-content;
+  max-width:fit-content;
+
   padding: 0.5rem 1rem;
   span {
+    /* overflow: hidden; */
+    white-space: nowrap;
+
     @media (max-width: 768px) {
       display: none;
     }
