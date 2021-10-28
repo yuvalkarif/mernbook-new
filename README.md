@@ -17,7 +17,7 @@
    <br/>
    <br/>
    <a href="https://mernbook-yk.herokuapp.com/">
-    <img width="33%" src=https://mernbook-yk.herokuapp.com/static/media/logo.bd0b6a6e.png> 
+    <img width="33%" src=https://raw.githubusercontent.com/yuvalkarif/mernbook-new/main/client/src/images/logo.png> 
   </a>
   <a href="https://mernbook-yk.herokuapp.com/">
     <img width="33%" src="https://media2.giphy.com/media/x8X9gbqK7sEeHmB1bD/giphy.gif?cid=790b761163a9ec8e5a9ad994545c52ad2639008e9c931a2e&rid=giphy.gif&ct=g"> 
