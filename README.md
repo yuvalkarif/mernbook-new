@@ -7,6 +7,9 @@
  Mernbook - Mern Stack Social Network
 </h1>
 
+> [!IMPORTANT]
+> This project was a big part of my solo learning journey and actually helped me land my first dev job.
+
 ## 📦Technologies
 * React, Styled Components and Typescript
 * NodeJS, Express, MongoDB and PassportJS
